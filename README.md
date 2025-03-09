@@ -1,1 +1,1 @@
-# tak_legkosite
+# tak_legkosite.github.io
