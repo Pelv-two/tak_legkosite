@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://raw.githubusercontent.com/Pelv-two/tak_legko/refs/heads/main/tak_legkoicon.jpg" type="image/jpg" style="border-radius: 25px;">
+    <title>Так легко</title>
+    <style>
+        body {
+            background-color: #0abab5;
+            margin: 0;
+            font-family: 'Gabriola', cursive, sans-serif; /* Установлен шрифт для всего тела */
+        }
+        #logo {
+            background-color: #0abab5; 
+            text-align: center; /* Центрирование текста */
+        }
+        #info001 {
+            border-radius: 25px; /* Радиус углов */
+            background-color: #7bf2da; 
+            display: flex; 
+            padding: 10px; /* Установлен внутренний отступ */
+            margin: 10px; /* Установлен внешний отступ */
+            flex-direction: row; /* Горизонтальное расположение по умолчанию */
+        }
+        .rounded {
+            border-radius: 25px; /* Радиус углов для изображения */
+            width: 20%; /* Ширина изображения */
+            margin: 1vw; 
+        }
+        h1 {
+            font-size: 6vw; /* Размер заголовка */
+            color: black;
+            margin: 0; /* Удалены отступы по умолчанию */
+        }
+        .info-text {
+            font-size: 4vw; /* Размер текста информации */
+            margin-left: 1vw; /* Отступ слева для текста */
+        }
+        #info002 {
+            border-radius: 25px; /* Радиус углов */
+            background-color: #81D8D0; /* Используем тот же цвет фона для согласованности */
+            padding: 10px; /* Установлен внутренний отступ */
+            margin: 10px; /* Установлен внешний отступ */
+        }
+        #info003 {
+            border-radius: 25px; /* Радиус углов */
+            margin: 10px; /* Внешний отступ */
+            /*padding: 10px; /* Внутренний отступ */
+            background-color: #0abab5; /* Цвет фона для согласованности */
+        }
+        #info003 img {
+            width: 100%; /* Ширина изображения равна ширине контейнера */
+            border-radius: 25px; /* Радиус углов для изображения */
+        }
+        .catalog-button {
+            font-family: 'Gabriola', cursive, sans-serif; /* Установлен шрифт для всего тела */
+            display: inline-block; /* Чтобы кнопки были на одной линии */
+            background-color: #7bf2da; /* Цвет фона кнопки */
+            color: black; /* Цвет текста */
+            padding: 15px 30px; /* Увеличенные внутренние отступы */
+            border: none; /* Убираем рамку */
+            border-radius: 30px; /* Увеличенный радиус углов */
+            text-decoration: none; /* Убираем подчеркивание у ссылки */
+            font-size: 20px; /* Увеличенный размер текста */
+            margin: 15px; /* Внешний отступ */
+            cursor: pointer; /* Курсор при наведении */
+            transition: background-color 0.3s; /* Плавный переход цвета */
+        }
+        .catalog-button:hover {
+            background-color: #81D8D0; /* Цвет фона при наведении */
+        }
+    </style>
+</head>
+<body>
+    <div id="logo">
+        <h1>Так легко - быть счастливым</h1>
+    </div>
+    <div id="info001">
+        <img src="https://raw.githubusercontent.com/Pelv-two/tak_legko/refs/heads/main/img001.png" alt="Петроваская Елена Борисовна" class="rounded">
+        <div class="info-text">
+            <h4 style="margin: 0">Петроваская Елена Борисовна</h4>
+            <h6 style="margin: 0">Гений, миллиардер, филантроп<br><br><em>"На свой счет надо принимать только деньги"</em><br><em>"Чем умнее человек, тем быстрее он признает себя дураком"</em></h6>
+        </div>
+    </div>
+    <div id="info002">
+        <h6 class="info-text" style="margin: 0">Так легко - это уютное и полезное пространство поддержки.<br>
+        Меня зовут Елена Петровская и я очень хочу способствовать повышению уровня счастья нашей планеты ✨<br>
+        Пространство для психологов, клиентов, людей, которым интересна психология</h6>
+    </div>
+    <div id="info003">
+        <img src="https://raw.githubusercontent.com/Pelv-two/tak_legko/refs/heads/main/img003.jpg" alt="Панорамы Санкт-Петербурга">
+    </div>
+    <div style="text-align: center; margin-top: 20px;">
+        <button class="catalog-button" onclick="scrollToSection('info001')">Персоналия</button>
+        <button class="catalog-button" onclick="scrollToSection('info002')">Описание</button>
+        <button class="catalog-button" onclick="scrollToSection('info003')">Красивый вид</button>
+    </div>
+    <script>
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            section.scrollIntoView({ behavior: 'smooth' }); // Плавная прокрутка к секции
+        }
+
+        // Обработка нажатий на кнопки
+        const buttons = document.querySelectorAll('.catalog-button');
+        buttons.forEach(button => {
+            button.addEventListener('touchstart', function() {
+                this.style.backgroundColor = '#81D8D0'; // Цвет фона при нажатии
+            });
+
+            button.addEventListener('touchend', function() {
+                this.style.backgroundColor = '#7bf2da'; // Возврат к исходному цвету
+            });
+        });
+    </script>
+</body>
+</html>
